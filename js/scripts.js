@@ -52,3 +52,20 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+const sidebarWrapper = document.querySelector('.sidebar__wrapper');
+const sidebarLogo = document.querySelector('.sidebar__logo');
+const sidebarWrapper2 = document.querySelector('.sidebar__wrapper2');
+const main = document.querySelector('.main');
+const square = document.querySelector('.square');
+const main2 = document.querySelector('.main2');
+const square2 = document.querySelector('.square2');
+
+square.addEventListener('click', () => {
+  sidebarWrapper.classList.toggle('closed');
+});
+square2.addEventListener('click', () => {
+    sidebarWrapper2.classList.toggle('closed');
+  });
+  

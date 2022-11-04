@@ -10,6 +10,10 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+body{
+  overflow-x: hidden;
+}
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11697,4 +11701,244 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+
+#twitter-timeline{
+  border-radius: 0px;
+}
+
+
+
+
+/* 
+ */
+
+
+ @-webkit-keyframes hover {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(-3px, 9px);
+  }
+  40% {
+    transform: translate(0px, -8px);
+  }
+  60% {
+    transform: translate(4px, 7px);
+  }
+  80% {
+    transform: translate(-5px, -8px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes hover {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(-3px, 9px);
+  }
+  40% {
+    transform: translate(0px, -8px);
+  }
+  60% {
+    transform: translate(4px, 7px);
+  }
+  80% {
+    transform: translate(-5px, -8px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.main {
+  height: 50vh;
+  min-width: 400px;
+  width: 100vw;
+  position: absolute;
+  overflow: hidden;
+  margin-left: 0px;
+  max-height: 50vh;
+  display: flex;
+  justify-content: center !important; 
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.3s;
+  -webkit-animation: fadeInUp 3s;
+          animation: fadeInUp 3s;
+}
+.main.closed {
+  margin-left: 0px;
+  width: 100vw;
+}
+
+.square {
+  background: #e5e6e8;
+  margin: 0 auto;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  -webkit-animation: hover 10s infinite;
+          animation: hover 10s infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  box-shadow: -2px 12px 36px rgba(0, 0, 0, 0.3), -43px 9px 72px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.5s;
+}
+.square span {
+  font-size: 2em;
+  border-bottom: 2px solid white;
+}
+
+.main2 {
+  margin-top: 50vh;
+  height: 50vh;
+  min-width: 400px;
+  width: 100vw;
+  position: absolute;
+  overflow: hidden;
+  margin-left: 0px;
+  max-height: 50vh;
+  display: flex;
+  justify-content: flex-start !important; 
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.3s;
+  -webkit-animation: fadeInUp 3s;
+          animation: fadeInUp 3s;
+}
+.main2.closed {
+  margin-left: 0px;
+  width: 100vw;
+}
+
+.square2 {
+  background: #e5e6e8;
+  margin: 0 auto;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  -webkit-animation: hover 10s infinite;
+          animation: hover 10s infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  box-shadow: -2px 12px 36px rgba(0, 0, 0, 0.3), -43px 9px 72px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.5s;
+}
+.square2 span {
+  font-size: 2em;
+  border-bottom: 2px solid white;
+}
+
+.sidebar__wrapper {
+  height: 50vh;
+  width: 40vw;
+  min-width: 280px;
+  overflow: scroll;
+  position: relative;
+  border-right: 3px solid #e6e6e6;
+  transform: translateX(0);
+  transition: all 0.5s;
+}
+.sidebar__wrapper.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar {
+  background: #e6e6e6;
+  left: 0;
+  top: 0;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transition: 0.2s linear;
+}
+
+.sidebar__logo {
+  width: 100%;
+  height: 18em;
+  background: #f46149;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+}
+.sidebar__logo.sticky {
+  position: fixed;
+  height: 5em;
+  z-index: 100;
+}
+.sidebar__logo span {
+  font-size: 3em;
+  border-bottom: 2px solid #f78b79;
+}
+
+.sidebar__item {
+  padding: 1.5em;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.sidebar__item:hover {
+  background: #cccccc;
+}
+
+
+.sidebar__wrapper2 {
+  height: 50vh;
+  width: 40vw;
+  min-width: 280px;
+  overflow: scroll;
+  position: relative;
+  left: calc(100vw - 40vw);
+  border-right: 3px solid #e6e6e6;
+  transform: translateX(0%);
+  transition: all 0.5s;
+}
+.sidebar__wrapper2.closed {
+  transform: translateX(100%);
+}
+
+.sidebar2 {
+  background: #e6e6e6;
+  right: 0;
+  top: 0;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transition: 0.2s linear;
+}
+
+
+.sidebar__item2 {
+  padding: 1.5em;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.sidebar__item2:hover {
+  background: #cccccc;
+}
+
+.timeline-Widget .timeline-Header {
+  display: none;
+}
+
+body > div > div.timeline-Header {
+  display: none;
 }
