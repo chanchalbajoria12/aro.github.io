@@ -16,45 +16,52 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Georgia", sans-serif;
     font-size: 62.5%;
     font-size: 10px;
 }
 
-
-
-
 /* Navbar section */
 
 .nav {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
     width: 100%;
-    height: 65px;
     position: fixed;
     line-height: 65px;
     text-align: center;
     z-index: 100;
+    background-color: white;
+    box-shadow: 0 0 5px #0e1c4f40;
 }
 
-.nav div.logo {
-    float: left;
-    width: auto;
-    height: auto;
+.nav .container-fluid{
+    display: flex;
+    align-items: center;
+}
+
+.nav .container-fluid .logo {
     padding-left: 3rem;
+    width: 15%;
 }
 
-.nav div.logo a {
+.nav div.logo img{
+    width: 100%;
+}
+
+/* .nav div.logo a {
     text-decoration: none;
     color: #fff;
     font-size: 2.5rem;
-}
+} */
 
 .nav div.logo a:hover {
-    color: #00E676;
+    color: #c4122f;
 }
 
 .nav div.main_list {
-    height: 65px;
-    float: right;
+    position: absolute;
+    right: 0;
 }
 
 .nav div.main_list ul {
@@ -75,16 +82,18 @@ body {
 
 .nav div.main_list ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #c4122f;
     line-height: 65px;
-    font-size: 2.4rem;
+    font-size: 14px;
 }
 
 .nav div.main_list ul li a:hover {
-    color: #00E676;
+    color: #460913;
 }
 
-
+.nav div.main_list ul li a .btn{
+    margin-top: 0;
+}
 
 .navTrigger {
     display: none;
@@ -96,7 +105,6 @@ body {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
-
 
 /* Media qurey section */
 
@@ -337,11 +345,10 @@ body {
 }
 
 .affix {
-    padding: 0;
-    background-color: #111;
+    /* padding: 0; */
+    background-color: #fff;
+    opacity: 0.9;
 }
-
-
 
 /* HERO */
 
@@ -366,7 +373,8 @@ body {
 .color-emphasis-1{color: #FF4056}
 
 .section{
-	height: 800px;
+	width: 100%;
+    height: 100vh;
 	padding: 3rem 0;
 	position: relative;
     background-color: #2A2C39;
@@ -411,11 +419,11 @@ section:before{
     border-radius: 6em;
     transition: all .2s;
     border: none;
-    font-family: inherit;
-    font-weight: 500;
-    color: black;
-    background-color: white;
-    cursor:pointer;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    color: white;
+    background-color: #c4122f;
+    cursor: pointer;
 }
 
 .btn:hover {
